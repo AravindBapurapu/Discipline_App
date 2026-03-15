@@ -46,3 +46,100 @@
     background: #64748b;
   }
 }
+
+
+/* Custom scrollbar styles */
+.custom-scrollbar::-webkit-scrollbar {
+  width: 8px;
+  height: 8px;
+}
+
+.custom-scrollbar::-webkit-scrollbar-track {
+  background: #f1f5f9;
+  border-radius: 10px;
+}
+
+.custom-scrollbar::-webkit-scrollbar-thumb {
+  background: #cbd5e1;
+  border-radius: 10px;
+}
+
+.custom-scrollbar::-webkit-scrollbar-thumb:hover {
+  background: #94a3b8;
+}
+
+.dark .custom-scrollbar::-webkit-scrollbar-track {
+  background: #1e293b;
+}
+
+.dark .custom-scrollbar::-webkit-scrollbar-thumb {
+  background: #475569;
+}
+
+.dark .custom-scrollbar::-webkit-scrollbar-thumb:hover {
+  background: #64748b;
+}
+
+/* Table sticky header shadow */
+.sticky {
+  box-shadow: 0 1px 2px rgba(0, 0, 0, 0.05);
+}
+
+.sticky.left-0 {
+  box-shadow: 2px 0 4px -2px rgba(0, 0, 0, 0.1);
+}
+
+.sticky.right-0 {
+  box-shadow: -2px 0 4px -2px rgba(0, 0, 0, 0.1);
+}
+
+/* Dark mode sticky shadows */
+.dark .sticky {
+  box-shadow: 0 1px 2px rgba(0, 0, 0, 0.3);
+}
+
+.dark .sticky.left-0 {
+  box-shadow: 2px 0 4px -2px rgba(0, 0, 0, 0.3);
+}
+
+.dark .sticky.right-0 {
+  box-shadow: -2px 0 4px -2px rgba(0, 0, 0, 0.3);
+}
+
+/* Table cell transitions */
+td, th {
+  transition: background-color 0.2s ease;
+}
+
+/* Checkbox animations */
+.peer:checked + div {
+  transform: scale(1);
+  animation: checkPop 0.2s ease;
+}
+
+@keyframes checkPop {
+  0% {
+    transform: scale(0.8);
+  }
+  50% {
+    transform: scale(1.1);
+  }
+  100% {
+    transform: scale(1);
+  }
+}
+
+/* Chart animations */
+.recharts-area-area {
+  transition: opacity 0.3s ease;
+}
+
+.recharts-line-dot {
+  transition: r 0.2s ease;
+}
+
+/* Hover effects for chart */
+.recharts-line-dot:hover {
+  r: 8;
+  filter: drop-shadow(0 4px 6px rgba(0, 0, 0, 0.1));
+}
